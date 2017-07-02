@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="index.css">
+		<!-- Vue JS -->
+		<script src="https://unpkg.com/vue"></script>
+		<script src="index.js"></script>
+	</head>
+
+	<body>
+		<div id='app'>
+			<h1>Card Counter</h1>
+			<li v-for="p in players">
+				Player: {{p}}
+				<div>
+					<div v-for="k, s in cards">
+						<button v-for="c in k" v-on:click="pickCard(s, c)">
+							{{s}} {{c}}
+						</button>
+					</div>
+				</div>
+			</li>
+		</div>
+	</body>
+</html>
