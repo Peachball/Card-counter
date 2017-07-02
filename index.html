@@ -2,6 +2,9 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="index.css">
+		<!-- jquery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+		</script>
 		<!-- Vue JS -->
 		<script src="https://unpkg.com/vue"></script>
 		<script src="index.js"></script>
@@ -14,7 +17,7 @@
 				Player: {{p}}
 				<div>
 					<div v-for="k, s in cards">
-						<button v-for="c in k" v-on:click="pickCard(s, c)">
+						<button v-for="c in k" @click="toggle(s, c, $event)" class="off">
 							{{s}} {{c}}
 						</button>
 					</div>

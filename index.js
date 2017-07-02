@@ -18,6 +18,14 @@ window.addEventListener('DOMContentLoaded', function() {
 		methods: {
 			pickCard: function(s, c) {
 				console.log(s, c, "picked");
+			},
+			toggle: function(s, c, $event) {
+				if ($event.target.className == "off") {
+					$event.target.className = "on";
+				} else {
+					$event.target.className = "off";
+				}
+				console.log($event.target);
 			}
 		}
 	});

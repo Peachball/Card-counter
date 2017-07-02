@@ -1,2 +1,14 @@
 button {
-};
+	height: 50px;
+	width: 50px;
+}
+
+.off {
+	background: red;
+	border: 5px solid red;
+}
+
+.on {
+	background: green;
+	border: 5px solid green;
+}
